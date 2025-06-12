@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRC RIZQI - Password Generator</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body>
+  <div class="container">
+    <div class="overlay">
+      <div class="tanggal-lengkap" id="tanggalLengkap">Tanggal</div>
+      <h2>HASILKAN PASSWORD WIFI</h2>
+      <h1>SRC RIZQI</h1>
+      <div id="password">*********</div>
+
+      <div class="char-setting">
+        <label for="charLength">
+          Jumlah karakter: <span id="charValue">9</span>
+        </label>
+        <input type="range" id="charLength" min="8" max="15" value="9">
+      </div>
+
+      <div class="buttons">
+        <button class="generate" onclick="generatePassword()">
+          <i id="genIcon">🔁</i> Generate
+        </button>
+        <button class="copy" id="copyBtn" onclick="copyPassword()" style="display: none;">
+          <i id="copyIcon">📋</i> Copy
+        </button>
+      </div>
+
+      <div class="quote" id="affirmation">Afirmasi harian...</div>
+
+      <canvas id="qrcodeCanvas"></canvas>
+      <div id="visibleQR" style="display:none;"></div>
+
+      <button id="downloadBtn" onclick="downloadQRCode()" style="display: none;">Unduh QR Code</button>
+    </div>
+  </div>
+  <script src="assets/js/qrcode.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
