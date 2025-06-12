@@ -29,7 +29,7 @@ function generatePassword() {
     const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    const ssid = "SRC-RIZQI";
+    const ssid = "SRC RIZQI";
     const wifiFormat = `WIFI:T:WPA;S:${ssid};P:${pwd};;`;
 
     const visibleQR = document.getElementById("visibleQR");
