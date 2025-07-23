@@ -87,7 +87,7 @@ function copyPassword() {
   const btn = document.querySelector(".copy");
   const icon = document.getElementById("copyIcon");
   btn.classList.add("copied");
-  icon.textContent = "✔️";
+  icon.textContent = "✅";
 }
 
 function downloadQRCode() {
